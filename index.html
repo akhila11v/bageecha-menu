@@ -9,7 +9,7 @@
   <!-- WhatsApp / social preview -->
   <meta property="og:title" content="Bageecha Dine.in – Order on WhatsApp" />
   <meta property="og:description" content="View our full menu and place your order directly on WhatsApp." />
-  <meta property="og:image" content="https://akhila11v.github.io/bageecha-menu/images/biryani.webp" />
+  <meta property="og:image" content="https://akhila11v.github.io/bageecha-menu/images/biryani.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://akhila11v.github.io/bageecha-menu/" />
 
@@ -18,36 +18,43 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body {
-      background: #fff7e6;
+      background: linear-gradient(135deg, #fff7e6, #fff);
       color: #222;
       line-height: 1.5;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     .page {
       max-width: 1100px;
       margin: 0 auto;
       padding: 16px;
-      padding-bottom: 80px;
+      padding-bottom: 90px; /* space for sticky WhatsApp button */
     }
 
+    /* HEADER */
     header {
       display: flex;
       align-items: center;
       gap: 12px;
       padding: 8px 0 16px;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     header img {
       width: 52px;
       height: 52px;
       object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     header h1 {
@@ -59,91 +66,410 @@
       font-weight: 300;
     }
 
+    header .tagline {
+      font-size: 0.92rem;
+      color: #555;
+    }
+
+    /* HERO */
     .hero {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 20px;
       padding: 20px 0;
       align-items: center;
     }
 
-    .hero-img img.main {
-      width: 100%;
-      border-radius: 18px;
-      max-height: 260px;
-      object-fit: cover;
+    .hero-text h2 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-text p {
+      margin-bottom: 14px;
+      color: #444;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      border: 1px solid rgba(0,0,0,0.09);
+      background: #fffdf7;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
     }
 
     .btn-primary {
       background: #25d366;
-      color: white;
+      color: #fff;
       padding: 10px 18px;
       border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-weight: bold;
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
     }
 
     .btn-primary span.icon {
       font-size: 1.2rem;
     }
 
-    .section {
+    .btn-ghost {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.12);
+      background: #fff;
+      font-size: 0.9rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    .hero-img {
+      position: relative;
+    }
+
+    .hero-img img.main {
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+      max-height: 260px;
+    }
+
+    .hero-img img.logo-mark {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      top: 12px;
+      left: 12px;
+      border-radius: 16px;
+      background: #fff;
+      padding: 6px;
+      object-fit: contain;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .hero-chip {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
+    /* SECTIONS */
+    section {
       margin-top: 24px;
       padding: 18px;
-      background: white;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      background: #ffffffdd;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      font-size: 0.92rem;
+      color: #444;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 12px;
+      font-size: 0.9rem;
+    }
+
+    .info-grid div {
+      padding-top: 4px;
+    }
+
+    .info-label {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .info-value {
+      margin-top: 2px;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: #c25b18;
+    }
+
+    .menu-preview-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .menu-preview-images img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    /* PDF MENU SECTION */
+    .pdf-menu-wrapper {
+      margin-top: 14px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+      background: #fdfbf7;
+    }
+
+    .pdf-menu-frame {
+      width: 100%;
+      height: 900px; /* full scrollable menu */
+      border: none;
+    }
+
+    .pdf-menu-note {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    /* BOTTOM CTA */
+    .bottom-cta {
+      text-align: center;
+    }
+
+    .bottom-cta p {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    /* STICKY WHATSAPP BUTTON */
+    .whatsapp-sticky {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 999;
+    }
+
+    .whatsapp-sticky a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25d366;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      color: #fff;
+      font-size: 1.6rem;
+    }
+
+    .whatsapp-sticky a span {
+      margin-top: 2px;
+    }
+
+    footer {
+      margin-top: 26px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .info-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .pdf-menu-frame {
+        height: 700px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .hero-text h2 {
+        font-size: 1.3rem;
+      }
+      .pdf-menu-frame {
+        height: 600px;
+      }
     }
   </style>
 </head>
-
 <body>
   <div class="page">
-
     <!-- HEADER -->
     <header>
-      <img src="images/logo.jpeg" alt="Bageecha Logo">
+      <img src="images/logo.png" alt="Bageecha Dine.in Logo" />
       <div>
-        <h1>BAGEECHA <span>DINE.IN</span></h1>
-        <div class="tagline">Biryani • Chinese • Indian • Tandoori</div>
+        <h1><span>BAGEECHA</span> DINE.IN</h1>
+        <div class="tagline">
+          Biryani • Chinese • Indian • Tandoori • Kebab’s • Pizza • Pasta • Mojito’s • Ice Creams
+        </div>
       </div>
     </header>
 
     <!-- HERO -->
-    <div class="hero">
-      <div class="hero-text">
-        <h2>Fresh Food, Great Ambience, Best Taste</h2>
-        <p>Order now on WhatsApp or visit us at Yennepally, Vikarabad.</p>
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h2>Feast your eyes before your taste buds 😋</h2>
+          <p>
+            Order your favourite dishes from <span class="highlight">Bageecha Dine.in</span>,
+            Yennepally, Vikarabad – directly on WhatsApp.
+          </p>
 
-        <a class="btn-primary" href="https://wa.me/919440490010?text=Hi%20I%20want%20to%20place%20an%20order">
-          <span class="icon">💬</span> Order on WhatsApp
+          <div class="badge-row">
+            <div class="badge">Dine-in & Takeaway</div>
+            <div class="badge">Family Restaurant</div>
+            <div class="badge">Veg & Non-Veg</div>
+          </div>
+
+          <div class="btn-row">
+            <!-- TOP WHATSAPP BUTTON -->
+            <a
+              class="btn-primary"
+              href="https://wa.me/919390387871?text=Hi%20Bageecha%20Dine.in%2C%20I%20want%20to%20place%20an%20order."
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="icon">🟢</span>
+              Order on WhatsApp
+            </a>
+
+            <a
+              class="btn-ghost"
+              href="https://maps.app.goo.gl/saxmXtNn9eMeRb1w8"
+              target="_blank"
+              rel="noopener"
+            >
+              📍 View location on Google Maps
+            </a>
+          </div>
+
+          <div class="hero-note">
+            For phone orders: <strong>9390387871</strong> / <strong>7989510069</strong>
+          </div>
+        </div>
+
+        <div class="hero-img">
+          <img src="images/front.jpg" alt="Bageecha Dine.in restaurant" class="main" />
+          <img src="images/biryani.jpg" alt="Signature biryani" class="logo-mark" />
+          <div class="hero-chip">Biryani • Chinese • Indian • Tandoori</div>
+        </div>
+      </section>
+
+      <!-- RESTAURANT INFO -->
+      <section>
+        <h3>Restaurant details</h3>
+        <div class="info-grid">
+          <div>
+            <div class="info-label">Address</div>
+            <div class="info-value">
+              Opp Mahavir Kaman, Yennepally, Vikarabad,<br />
+              Telangana – 501101
+            </div>
+          </div>
+          <div>
+            <div class="info-label">Contact</div>
+            <div class="info-value">
+              Order now: <strong>9390387871</strong> / <strong>7989510069</strong><br />
+              WhatsApp orders preferred 📲
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-preview-images">
+          <img src="images/biryani.jpg" alt="Biryani from Bageecha Dine.in" />
+          <!-- If you want, you can duplicate or add more preview images here -->
+        </div>
+      </section>
+
+      <!-- FULL MENU (PDF) -->
+      <section>
+        <h3>Full Menu – Scroll & Choose Your Favorites</h3>
+        <p>
+          Below is our complete food menu. Scroll through all pages and pick your dishes.
+          When you’re ready, use the WhatsApp button at the bottom to send your order.
+        </p>
+
+        <div class="pdf-menu-wrapper">
+          <!-- This shows the PDF menu inside the page as a continuous scroll -->
+          <iframe
+            class="pdf-menu-frame"
+            src="menu.pdf#view=FitH&scrollbar=1&toolbar=1"
+          >
+          </iframe>
+        </div>
+        <div class="pdf-menu-note">
+          If the menu doesn’t load, <a href="menu.pdf" target="_blank" rel="noopener">click here</a> to open the PDF in a new tab.
+        </div>
+      </section>
+
+      <!-- BOTTOM WHATSAPP CTA -->
+      <section class="bottom-cta">
+        <h3>Ready to order?</h3>
+        <p>
+          Send us your selected items and quantity on WhatsApp, and our team will confirm
+          your order and preparation time.
+        </p>
+        <a
+          class="btn-primary"
+          href="https://wa.me/919390387871?text=Hi%20Bageecha%20Dine.in%2C%20I%20have%20checked%20the%20menu%20and%20want%20to%20order%20the%20following%20items%3A"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="icon">💬</span>
+          Send order on WhatsApp
         </a>
-      </div>
+      </section>
 
-      <div class="hero-img">
-        <img class="main" src="images/front.jpeg" alt="Bageecha Restaurant Front">
-      </div>
-    </div>
+      <footer>
+        © Bageecha Dine.in, Vikarabad – Feast your eyes before your taste buds.
+      </footer>
+    </main>
+  </div>
 
-    <!-- MENU PREVIEW -->
-    <section class="section">
-      <h3>Popular Dish</h3>
-      <p>Our special Chicken Dum Biryani loved by customers!</p>
-      <img src="images/biryani.webp" style="width:100%; border-radius:12px; margin-top:10px;">
-    </section>
-
-    <!-- MENU PDF -->
-    <section class="section">
-      <h3>View Full Menu</h3>
-      <p>Click below to open our complete food menu.</p>
-
-      <a class="btn-primary" href="menu.pdf" target="_blank">
-        📄 View Menu PDF
-      </a>
-    </section>
-
+  <!-- STICKY WHATSAPP BUTTON (BOTTOM RIGHT) -->
+  <div class="whatsapp-sticky">
+    <a
+      href="https://wa.me/919390387871?text=Hi%20Bageecha%20Dine.in%2C%20I%20want%20to%20place%20an%20order."
+      target="_blank"
+      rel="noopener"
+      aria-label="Order on WhatsApp"
+    >
+      <span>⌁</span>
+    </a>
   </div>
 </body>
 </html>
