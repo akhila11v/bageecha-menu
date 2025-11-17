@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -6,169 +6,126 @@
 <title>Bageecha Dine.in – Vikarabad</title>
 
 <style>
-  body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    background: #fffaf1;
-    color: #222;
-  }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #000;
+        color: #fff;
+    }
 
-  .page {
-    max-width: 1150px;
-    margin: auto;
-    padding: 16px;
-  }
+    header {
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
 
-  header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 16px;
-  }
+    header img.logo {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid gold;
+    }
 
-  header img.logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #eee;
-  }
+    header h1 {
+        margin-top: 10px;
+        font-size: 28px;
+        letter-spacing: 3px;
+        color: gold;
+    }
 
-  header .title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
+    .sub {
+        font-size: 14px;
+        opacity: 0.9;
+        margin-top: 6px;
+    }
 
-  /* HERO SECTION */
-  .hero-img {
-    width: 100%;
-    border-radius: 18px;
-    overflow: hidden;
-    margin-bottom: 22px;
-  }
-  .hero-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+    .hero {
+        width: 100%;
+        margin-top: 15px;
+    }
 
-  /* SECTION BOXES */
-  section {
-    background: white;
-    padding: 20px;
-    margin-bottom: 22px;
-    border-radius: 16px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  }
+    .hero img {
+        width: 100%;
+        border-radius: 0;
+    }
 
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-  }
+    .section {
+        padding: 20px;
+    }
 
-  /* GOOGLE MAP LINK */
-  .map-btn {
-    display: inline-flex;
-    padding: 10px 16px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 999px;
-    margin-top: 12px;
-    font-size: 0.9rem;
-  }
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+    }
 
-  /* PDF VIEWER */
-  .pdf-box {
-    width: 100%;
-    height: 1100px; /* controls PDF height */
-    border: none;
-    margin-top: 12px;
-    border-radius: 12px;
-  }
+    .tag {
+        border: 1px solid gold;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
 
-  /* STICKY WHATSAPP BUTTON */
-  .whatsapp-sticky {
-    position: fixed;
-    right: 18px;
-    bottom: 18px;
-    background: #25d366;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 32px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    text-decoration: none;
-    z-index: 999;
-  }
+    /* MENU IMAGE STYLE */
+    .menu-img {
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 12px;
+        border: 1px solid #333;
+        box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
+    }
+
+    /* Sticky WhatsApp Button */
+    .wa-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #25d366;
+        color: #fff;
+        padding: 16px 20px;
+        border-radius: 50%;
+        font-size: 28px;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
 </style>
 </head>
 
 <body>
 
-<div class="page">
+<header>
+    <img src="images/logo.jpeg" class="logo" alt="logo" />
+    <h1>BAGEECHA DINE.IN</h1>
+    <div class="sub">Biryani • Chinese • Indian • Tandoori • Kebabs • Pizza • Pasta • Desserts</div>
+</header>
 
-  <!-- HEADER -->
-  <header>
-    <img src="images/logo.jpeg" class="logo" alt="Bageecha Logo">
-    <div class="title">BAGEECHA DINE.IN</div>
-  </header>
-
-  <!-- HERO IMAGE -->
-  <div class="hero-img">
-    <img src="images/front.jpeg" alt="Restaurant Front">
-  </div>
-
-  <!-- INTRO SECTION -->
-  <section>
-    <h2>Feast your eyes before your taste buds 😋</h2>
-    <p>
-      Order your favourite dishes from <b>Bageecha Dine.in</b>, Yennepally, Vikarabad —
-      directly on WhatsApp.
-    </p>
-
-    <div class="map-btn">
-      📍 <a href="https://maps.app.goo.gl/saxmXtNn9eMeRb1w8" target="_blank" style="margin-left:6px;text-decoration:none;color:#333;">
-        View location on Google Maps
-      </a>
-    </div>
-
-    <p style="margin-top:14px;">
-      📞 For phone orders:
-      <b>9390387871</b> / <b>7989510069</b>
-    </p>
-  </section>
-
-  <!-- FULL MENU PDF -->
-  <section>
-    <h2>Full Menu – Scroll & Choose Your Favorites</h2>
-    <p>Browse our complete food menu below. No need to download — scroll directly.</p>
-
-    <!-- DIRECT PDF EMBED -->
-    <iframe src="menu.pdf#toolbar=0&navpanes=0&scrollbar=0" class="pdf-box"></iframe>
-
-  </section>
-
-  <!-- CONTACT DETAILS -->
-  <section>
-    <h2>Restaurant details</h2>
-    <p>
-      Opp Mahavir Kaman,<br>
-      Yennepally, Vikarabad,<br>
-      Telangana – 501101
-    </p>
-  </section>
-
+<div class="hero">
+    <img src="images/front.jpeg" alt="Restaurant Front" />
 </div>
 
-<!-- STICKY WHATSAPP BUTTON -->
-<a href="https://wa.me/9390387871?text=Hi%20Bageecha%20Dine.in%20-%20I%20would%20like%20to%20order%20food." class="whatsapp-sticky">
-  ⚡
+<div class="section">
+    <h2 style="color: gold;">Full Menu – Scroll & Choose Your Favorites</h2>
+    <p>Below is our complete food menu. Scroll all pages and pick your dishes.</p>
+
+    <!-- MENU IMAGES -->
+    <img src="images/menu_page_1.jpg" class="menu-img" loading="lazy">
+    <img src="images/menu_page_2.jpg" class="menu-img" loading="lazy">
+    <img src="images/menu_page_3.jpg" class="menu-img" loading="lazy">
+    <img src="images/menu_page_4.jpg" class="menu-img" loading="lazy">
+    <img src="images/menu_page_5.jpg" class="menu-img" loading="lazy">
+    <img src="images/menu_page_6.jpg" class="menu-img" loading="lazy">
+    <img src="images/menu_page_7.jpg" class="menu-img" loading="lazy">
+    <img src="images/menu_page_8.jpg" class="menu-img" loading="lazy">
+</div>
+
+<!-- WhatsApp Sticky Button -->
+<a class="wa-btn" href="https://wa.me/9390387871?text=Hi%20Bageecha%20Dine.in,%20I%20would%20like%20to%20place%20an%20order.%20">
+    💬
 </a>
 
 </body>
 </html>
+ 
