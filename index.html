@@ -1,118 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Disable cache so old version never loads -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
+  <!-- Disable cache so old version never loads -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 
-<title>Bageecha Dine.in – Vikarabad</title>
+  <title>Bageecha Dine.in – Vikarabad</title>
 
-<style>
+  <style>
     body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #000;
-        color: #fff;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
     }
 
     header {
-        padding: 20px;
-        text-align: center;
-        border-bottom: 1px solid #333;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
     }
 
     header img.logo {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid gold;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid gold;
     }
 
     header h1 {
-        margin-top: 10px;
-        font-size: 28px;
-        letter-spacing: 3px;
-        color: gold;
+      margin-top: 10px;
+      font-size: 28px;
+      letter-spacing: 3px;
+      color: gold;
     }
 
     .sub {
-        font-size: 14px;
-        opacity: 0.9;
-        margin-top: 6px;
+      font-size: 14px;
+      opacity: 0.9;
+      margin-top: 6px;
     }
 
     .hero {
-        width: 100%;
-        margin-top: 15px;
+      width: 100%;
+      margin-top: 15px;
     }
 
     .hero img {
-        width: 100%;
-        border-radius: 0;
+      width: 100%;
+      border-radius: 0;
     }
 
     .section {
-        padding: 20px;
+      padding: 20px;
     }
 
     .menu-img {
-        width: 100%;
-        margin-top: 20px;
-        border-radius: 12px;
-        border: 1px solid #333;
-        box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 12px;
+      border: 1px solid #333;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
     }
 
-    .wa-btn {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        background: #25d366;
-        color: #fff;
-        padding: 16px 20px;
-        border-radius: 50%;
-        font-size: 28px;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    /* Bottom WhatsApp block */
+    .bottom-cta {
+      text-align: center;
+      padding-bottom: 80px; /* space for sticky button */
     }
-</style>
+
+    .bottom-cta h2 {
+      color: gold;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .bottom-cta p {
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    .wa-order-btn {
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Sticky WhatsApp Button (floating) */
+    .wa-btn {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: #fff;
+      padding: 16px 20px;
+      border-radius: 50%;
+      font-size: 28px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <header>
     <img src="images/logo.jpeg" class="logo" alt="logo" />
     <h1>BAGEECHA DINE.IN</h1>
     <div class="sub">Biryani • Chinese • Indian • Tandoori • Kebabs • Pizza • Pasta • Desserts</div>
-</header>
+  </header>
 
-<div class="hero">
+  <div class="hero">
     <img src="images/front.jpeg" alt="Restaurant Front" />
-</div>
+  </div>
 
-<div class="section">
+  <div class="section">
     <h2 style="color: gold;">Full Menu – Scroll & Choose Your Favorites</h2>
     <p>Below is our complete food menu. Scroll all pages and pick your dishes.</p>
 
-    <img src="images/menu_page_1.jpg" class="menu-img" loading="lazy">
-    <img src="images/menu_page_2.jpg" class="menu-img" loading="lazy">
-    <img src="images/menu_page_3.jpg" class="menu-img" loading="lazy">
-    <img src="images/menu_page_4.jpg" class="menu-img" loading="lazy">
-    <img src="images/menu_page_5.jpg" class="menu-img" loading="lazy">
-    <img src="images/menu_page_6.jpg" class="menu-img" loading="lazy">
-    <img src="images/menu_page_7.jpg" class="menu-img" loading="lazy">
-    <img src="images/menu_page_8.jpg" class="menu-img" loading="lazy">
-</div>
+    <!-- Menu pages as images -->
+    <img src="images/menu_page_1.jpg" class="menu-img" loading="lazy" alt="Menu page 1">
+    <img src="images/menu_page_2.jpg" class="menu-img" loading="lazy" alt="Menu page 2">
+    <img src="images/menu_page_3.jpg" class="menu-img" loading="lazy" alt="Menu page 3">
+    <img src="images/menu_page_4.jpg" class="menu-img" loading="lazy" alt="Menu page 4">
+    <img src="images/menu_page_5.jpg" class="menu-img" loading="lazy" alt="Menu page 5">
+    <img src="images/menu_page_6.jpg" class="menu-img" loading="lazy" alt="Menu page 6">
+    <img src="images/menu_page_7.jpg" class="menu-img" loading="lazy" alt="Menu page 7">
+    <img src="images/menu_page_8.jpg" class="menu-img" loading="lazy" alt="Menu page 8">
+  </div>
 
-<a class="wa-btn" href="https://wa.me/9390387871?text=Hi%20Bageecha%20Dine.in,%20I%20would%20like%20to%20place%20an%20order.%20">
+  <!-- Bottom WhatsApp section -->
+  <div class="section bottom-cta">
+    <h2>Ready to Order?</h2>
+    <p>Send us your selected items and quantities on WhatsApp. We’ll confirm your order and timing.</p>
+
+    <a class="wa-order-btn"
+       href="https://wa.me/9390387871?text=Hi%20Bageecha%20Dine.in,%20I%20would%20like%20to%20place%20an%20order.%20">
+      Order on WhatsApp
+    </a>
+  </div>
+
+  <!-- Sticky floating WhatsApp button -->
+  <a class="wa-btn"
+     href="https://wa.me/9390387871?text=Hi%20Bageecha%20Dine.in,%20I%20would%20like%20to%20place%20an%20order.%20">
     💬
-</a>
+  </a>
 
 </body>
 </html>
