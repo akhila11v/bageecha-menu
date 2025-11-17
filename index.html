@@ -9,7 +9,6 @@
   <!-- WhatsApp / social preview -->
   <meta property="og:title" content="Bageecha Dine.in – Order on WhatsApp" />
   <meta property="og:description" content="View our full menu and place your order directly on WhatsApp." />
-  <!-- Update the URL below after you upload biryani.jpg -->
   <meta property="og:image" content="https://akhila11v.github.io/bageecha-menu/images/biryani.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://akhila11v.github.io/bageecha-menu/" />
@@ -37,7 +36,7 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 16px;
-      padding-bottom: 80px; /* space for sticky WhatsApp button */
+      padding-bottom: 80px;
     }
 
     header {
@@ -182,4 +181,209 @@
     }
 
     section h3 {
-      font-si
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .location-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr);
+      gap: 14px;
+      font-size: 0.9rem;
+    }
+
+    .location-body strong {
+      font-size: 0.95rem;
+    }
+
+    .map-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: #0066cc;
+    }
+
+    .highlight {
+      color: #c08a21;
+      font-weight: 600;
+    }
+
+    .menu-embed {
+      margin-top: 10px;
+    }
+
+    .menu-embed iframe {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.08);
+      min-height: 500px;
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 6px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 24px;
+      padding-bottom: 20px;
+    }
+
+    footer span.brand {
+      font-weight: 600;
+      color: #c08a21;
+    }
+
+    .whatsapp-sticky {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 8px 14px;
+      background: #fffffffa;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: center;
+      z-index: 50;
+    }
+
+    .whatsapp-sticky a {
+      flex: 1;
+      max-width: 420px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .hero-img img.main {
+        max-height: 220px;
+      }
+      section {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <img src="images/logo.png" alt="Bageecha logo" />
+      <div>
+        <h1>BAGEECHA <span>DINE.IN</span></h1>
+        <div class="tagline">Biryani • Chinese • Indian • Tandoori • Continental</div>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="hero-text">
+          <h2>Craving something delicious in Vikarabad?</h2>
+          <p>
+            Browse our full <span class="highlight">Bageecha Menu</span> and place your order
+            directly on WhatsApp for takeaway or dine-in.
+          </p>
+
+          <div class="badge-row">
+            <div class="badge">Opp Mahavir Kaman, Yennepally</div>
+            <div class="badge">Vikarabad, Telangana – 501101</div>
+            <div class="badge">Veg & Non-Veg</div>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn-primary"
+              href="https://wa.me/919390387871?text=Hi%20Bageecha%2C%20I%20would%20like%20to%20place%20an%20order."
+              target="_blank">
+              <span class="icon">💬</span>
+              Order on WhatsApp
+            </a>
+
+            <a class="btn-ghost" href="#menu">View Menu PDF</a>
+          </div>
+
+          <div class="hero-note">
+            For call orders: <strong>9390387871 / 7989510069</strong>
+          </div>
+        </div>
+
+        <div class="hero-img">
+          <img class="main" src="images/biryani.jpg" alt="Biryani" />
+          <img class="logo-mark" src="images/logo.png" alt="logo small" />
+          <div class="hero-chip">Fresh • Hot • Tasty</div>
+        </div>
+      </section>
+
+      <section id="location">
+        <h3>Location & Timing</h3>
+        <div class="location-body">
+          <div>
+            <p><strong>Bageecha Dine.in</strong></p>
+            <p>Opp Mahavir Kaman, Yennepally,<br />Vikarabad, Telangana – 501101</p>
+
+            <p style="margin-top:8px;"><strong>Google Maps:</strong></p>
+            <a class="map-link"
+              href="https://maps.app.goo.gl/saxmXtNn9eMeRb1w8" target="_blank">📍 Open in Google Maps</a>
+
+            <p style="margin-top:10px;"><strong>Orders & Enquiries:</strong><br />9390387871 | 7989510069</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>The Bageecha Experience</h3>
+        <p style="margin-bottom:10px; font-size:0.9rem;">
+          Spacious dine-in restaurant with a party lawn, perfect for families, friends, and celebrations.
+        </p>
+
+        <img src="images/front.jpg"
+          style="width:100%; border-radius:14px; max-height:320px; object-fit:cover;" />
+      </section>
+
+      <section id="menu">
+        <h3>Menu – PDF View</h3>
+        <p style="font-size:0.9rem;">
+          Scroll inside the PDF below to view the complete Bageecha Menu.
+        </p>
+
+        <div class="menu-embed">
+          <iframe src="menu.pdf#view=FitH" title="Menu PDF"></iframe>
+        </div>
+
+        <p class="small">
+          If the PDF doesn’t load, <a href="menu.pdf" target="_blank">click here</a>.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© <span class="brand">Bageecha Dine.in</span>, Vikarabad.</p>
+    </footer>
+
+  </div>
+
+  <div class="whatsapp-sticky">
+    <a class="btn-primary"
+      href="https://wa.me/919390387871?text=Hi%20Bageecha%2C%20I%20would%20like%20to%20place%20an%20order."
+      target="_blank">
+      <span class="icon">💬</span>
+      Order on WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>
