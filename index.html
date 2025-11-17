@@ -9,7 +9,7 @@
   <!-- WhatsApp / social preview -->
   <meta property="og:title" content="Bageecha Dine.in – Order on WhatsApp" />
   <meta property="og:description" content="View our full menu and place your order directly on WhatsApp." />
-  <meta property="og:image" content="https://akhila11v.github.io/bageecha-menu/images/biryani.jpg" />
+  <meta property="og:image" content="https://akhila11v.github.io/bageecha-menu/images/biryani.webp" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://akhila11v.github.io/bageecha-menu/" />
 
@@ -18,19 +18,16 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, sans-serif;
     }
 
     body {
-      background: linear-gradient(135deg, #fff7e6, #fff);
+      background: #fff7e6;
       color: #222;
       line-height: 1.5;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
     .page {
       max-width: 1100px;
@@ -44,7 +41,7 @@
       align-items: center;
       gap: 12px;
       padding: 8px 0 16px;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
     }
 
     header img {
@@ -62,217 +59,42 @@
       font-weight: 300;
     }
 
-    header .tagline {
-      font-size: 0.92rem;
-      color: #555;
-    }
-
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      grid-template-columns: 1.2fr 1fr;
       gap: 20px;
       padding: 20px 0;
       align-items: center;
     }
 
-    .hero-text h2 {
-      font-size: 1.6rem;
-      margin-bottom: 8px;
-    }
-
-    .hero-text p {
-      margin-bottom: 14px;
-      color: #444;
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-
-    .badge {
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      border: 1px solid rgba(0,0,0,0.09);
-      background: #fffdf7;
-    }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 8px;
+    .hero-img img.main {
+      width: 100%;
+      border-radius: 18px;
+      max-height: 260px;
+      object-fit: cover;
     }
 
     .btn-primary {
       background: #25d366;
-      color: #fff;
+      color: white;
       padding: 10px 18px;
       border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+      font-weight: bold;
     }
 
     .btn-primary span.icon {
       font-size: 1.2rem;
     }
 
-    .btn-ghost {
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.12);
-      background: #fff;
-      font-size: 0.9rem;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: #777;
-    }
-
-    .hero-img {
-      position: relative;
-    }
-
-    .hero-img img.main {
-      width: 100%;
-      border-radius: 18px;
-      object-fit: cover;
-      max-height: 260px;
-    }
-
-    .hero-img img.logo-mark {
-      position: absolute;
-      width: 64px;
-      height: 64px;
-      top: 12px;
-      left: 12px;
-      border-radius: 16px;
-      background: #fff;
-      padding: 6px;
-      object-fit: contain;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .hero-chip {
-      position: absolute;
-      bottom: 12px;
-      right: 12px;
-      background: rgba(0,0,0,0.75);
-      color: #fff;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-    }
-
-    section {
+    .section {
       margin-top: 24px;
       padding: 18px;
+      background: white;
       border-radius: 16px;
-      background: #ffffffdd;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-
-    section h3 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-
-    .location-body {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr);
-      gap: 14px;
-      font-size: 0.9rem;
-    }
-
-    .location-body strong {
-      font-size: 0.95rem;
-    }
-
-    .map-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 6px;
-      font-size: 0.9rem;
-      color: #0066cc;
-    }
-
-    .highlight {
-      color: #c08a21;
-      font-weight: 600;
-    }
-
-    .menu-embed {
-      margin-top: 10px;
-    }
-
-    .menu-embed iframe {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid rgba(0,0,0,0.08);
-      min-height: 500px;
-    }
-
-    .small {
-      font-size: 0.8rem;
-      color: #777;
-      margin-top: 6px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #777;
-      margin-top: 24px;
-      padding-bottom: 20px;
-    }
-
-    footer span.brand {
-      font-weight: 600;
-      color: #c08a21;
-    }
-
-    .whatsapp-sticky {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 8px 14px;
-      background: #fffffffa;
-      box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
-      display: flex;
-      justify-content: center;
-      z-index: 50;
-    }
-
-    .whatsapp-sticky a {
-      flex: 1;
-      max-width: 420px;
-      text-align: center;
-      justify-content: center;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      header h1 {
-        font-size: 1.4rem;
-      }
-      .hero-img img.main {
-        max-height: 220px;
-      }
-      section {
-        padding: 14px;
-      }
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
   </style>
 </head>
@@ -280,110 +102,48 @@
 <body>
   <div class="page">
 
+    <!-- HEADER -->
     <header>
-      <img src="images/logo.png" alt="Bageecha logo" />
+      <img src="images/logo.jpeg" alt="Bageecha Logo">
       <div>
         <h1>BAGEECHA <span>DINE.IN</span></h1>
-        <div class="tagline">Biryani • Chinese • Indian • Tandoori • Continental</div>
+        <div class="tagline">Biryani • Chinese • Indian • Tandoori</div>
       </div>
     </header>
 
-    <main>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-text">
+        <h2>Fresh Food, Great Ambience, Best Taste</h2>
+        <p>Order now on WhatsApp or visit us at Yennepally, Vikarabad.</p>
 
-      <section class="hero">
-        <div class="hero-text">
-          <h2>Craving something delicious in Vikarabad?</h2>
-          <p>
-            Browse our full <span class="highlight">Bageecha Menu</span> and place your order
-            directly on WhatsApp for takeaway or dine-in.
-          </p>
+        <a class="btn-primary" href="https://wa.me/919440490010?text=Hi%20I%20want%20to%20place%20an%20order">
+          <span class="icon">💬</span> Order on WhatsApp
+        </a>
+      </div>
 
-          <div class="badge-row">
-            <div class="badge">Opp Mahavir Kaman, Yennepally</div>
-            <div class="badge">Vikarabad, Telangana – 501101</div>
-            <div class="badge">Veg & Non-Veg</div>
-          </div>
+      <div class="hero-img">
+        <img class="main" src="images/front.jpeg" alt="Bageecha Restaurant Front">
+      </div>
+    </div>
 
-          <div class="btn-row">
-            <a class="btn-primary"
-              href="https://wa.me/919390387871?text=Hi%20Bageecha%2C%20I%20would%20like%20to%20place%20an%20order."
-              target="_blank">
-              <span class="icon">💬</span>
-              Order on WhatsApp
-            </a>
+    <!-- MENU PREVIEW -->
+    <section class="section">
+      <h3>Popular Dish</h3>
+      <p>Our special Chicken Dum Biryani loved by customers!</p>
+      <img src="images/biryani.webp" style="width:100%; border-radius:12px; margin-top:10px;">
+    </section>
 
-            <a class="btn-ghost" href="#menu">View Menu PDF</a>
-          </div>
+    <!-- MENU PDF -->
+    <section class="section">
+      <h3>View Full Menu</h3>
+      <p>Click below to open our complete food menu.</p>
 
-          <div class="hero-note">
-            For call orders: <strong>9390387871 / 7989510069</strong>
-          </div>
-        </div>
-
-        <div class="hero-img">
-          <img class="main" src="images/biryani.jpg" alt="Biryani" />
-          <img class="logo-mark" src="images/logo.png" alt="logo small" />
-          <div class="hero-chip">Fresh • Hot • Tasty</div>
-        </div>
-      </section>
-
-      <section id="location">
-        <h3>Location & Timing</h3>
-        <div class="location-body">
-          <div>
-            <p><strong>Bageecha Dine.in</strong></p>
-            <p>Opp Mahavir Kaman, Yennepally,<br />Vikarabad, Telangana – 501101</p>
-
-            <p style="margin-top:8px;"><strong>Google Maps:</strong></p>
-            <a class="map-link"
-              href="https://maps.app.goo.gl/saxmXtNn9eMeRb1w8" target="_blank">📍 Open in Google Maps</a>
-
-            <p style="margin-top:10px;"><strong>Orders & Enquiries:</strong><br />9390387871 | 7989510069</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h3>The Bageecha Experience</h3>
-        <p style="margin-bottom:10px; font-size:0.9rem;">
-          Spacious dine-in restaurant with a party lawn, perfect for families, friends, and celebrations.
-        </p>
-
-        <img src="images/front.jpg"
-          style="width:100%; border-radius:14px; max-height:320px; object-fit:cover;" />
-      </section>
-
-      <section id="menu">
-        <h3>Menu – PDF View</h3>
-        <p style="font-size:0.9rem;">
-          Scroll inside the PDF below to view the complete Bageecha Menu.
-        </p>
-
-        <div class="menu-embed">
-          <iframe src="menu.pdf#view=FitH" title="Menu PDF"></iframe>
-        </div>
-
-        <p class="small">
-          If the PDF doesn’t load, <a href="menu.pdf" target="_blank">click here</a>.
-        </p>
-      </section>
-
-    </main>
-
-    <footer>
-      <p>© <span class="brand">Bageecha Dine.in</span>, Vikarabad.</p>
-    </footer>
+      <a class="btn-primary" href="menu.pdf" target="_blank">
+        📄 View Menu PDF
+      </a>
+    </section>
 
   </div>
-
-  <div class="whatsapp-sticky">
-    <a class="btn-primary"
-      href="https://wa.me/919390387871?text=Hi%20Bageecha%2C%20I%20would%20like%20to%20place%20an%20order."
-      target="_blank">
-      <span class="icon">💬</span>
-      Order on WhatsApp
-    </a>
-  </div>
-
 </body>
 </html>
